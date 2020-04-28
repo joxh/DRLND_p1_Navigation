@@ -1,9 +1,19 @@
 
 # Project 1: Navigation
 
+## Introduction
+
 ### Project Details
 
 This project contains code for training an agent to navigate in a large, square world while collecting bananas. Collecting a yellow banana corresponds to a reward of +1 and collecting a blue banana corresponds to a reward of -1. The goal is to collect the highest possible cumulative reward by collecting yellow bananas while avoiding the blue ones.
+
+* **Model File** : `model.py` Contains the definition of the `QNetwork`
+* **Agent File** : `dqn_agent.py` Contains the code for the agent's learning and acting functionality along with it's replay buffer.
+* **Training Code**: `dqn_training_banana.py` Contains the code for doing the epsilon-annealed learning
+* **Evaluation Code**: `dqn_acting_banana.py` Contains code for running the agent in a deterministic mode and evaluating.
+* **Other Helper Files**:
+  * `banana_helpers.py`: Provides a more standardized interface for the Unity Environment
+  * `visualization_banana.py`: Stores some needed visualization code
 
 The **state space has 37 dimensions**. According to the description of the Unity-ML code:
 
@@ -30,20 +40,20 @@ The instructions for creating a correctly configured virtual environment can be 
 (The following section is copied from the `README.md` supplied by Udacity and contains the most comprehensive description of how to install the environment)
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
-    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
-    
+    * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+    * Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+    * Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+    * Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+
     (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
 
 2. (Different from Udacity's) Place the file in the same folder as you will execute your training code from.
 
-### Instructions
+## Instructions
 
-From a jupyter notebook, with the , one can do:
+From a Jupyter notebook, to train the agent, one can do:
 
 ```python
 import dqn_training_banana

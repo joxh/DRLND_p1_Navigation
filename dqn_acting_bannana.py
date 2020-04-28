@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from contextlib import contextmanager
 
 
-from bannana_helpers import (
+from banana_helpers import (
     reset_and_get_first_state,
     get_next_state_reward_done,
     get_environment,
@@ -18,7 +18,7 @@ from visualization_banana import plot_score_cumulative_distribution
 
 def main(
     file_name="/Users/joshuaschoenfield/Downloads/Banana.app",
-    weights_file="checkpoint_bannana_2_LONG_SAFE.pth",
+    weights_file="checkpoint_banana_2_LONG_SAFE.pth",
 ):
     with get_environment(file_name=file_name) as env:
         from dqn_agent import Agent

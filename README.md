@@ -46,8 +46,8 @@ The instructions for creating a correctly configured virtual environment can be 
 From a jupyter notebook, with the , one can do:
 
 ```python
-import dqn_training_bannana
-scores, running_average = dqn_training_bannana.main(
+import dqn_training_banana
+scores, running_average = dqn_training_banana.main(
     file_name="<path_to_environment>",
     with_plotting=False,
 )
@@ -57,9 +57,9 @@ where `<path_to_environment>` is replaced with the path to the Banana file. This
 Then, to evaluate the environment: 
 
 ```python
-import dqn_acting_bannana
-validation_scores = dqn_acting_bannana.main(
-    weights_file="checkpoint_bannana_2.pth",
+import dqn_acting_banana
+validation_scores = dqn_acting_banana.main(
+    weights_file="checkpoint_banana_2.pth",
     file_name="<path_to_environment>",
 )
 ```

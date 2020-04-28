@@ -5,7 +5,7 @@ import numpy as np
 from collections import deque
 import matplotlib.pyplot as plt
 from contextlib import contextmanager
-from bannana_helpers import (
+from banana_helpers import (
     reset_and_get_first_state,
     get_next_state_reward_done,
     get_environment,
@@ -112,7 +112,7 @@ def dqn(
                     i_episode - 100, np.mean(scores_window)
                 )
             )
-            torch.save(agent.qnetwork_local.state_dict(), "checkpoint_bannana_2.pth")
+            torch.save(agent.qnetwork_local.state_dict(), "checkpoint_banana_2.pth")
             np.savetxt("training_scores_checkpoint.txt", scores)
             if with_plotting:
                 ax.clear()

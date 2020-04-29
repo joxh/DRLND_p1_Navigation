@@ -8,6 +8,7 @@
 This project contains code for training an agent to navigate in a large, square world while collecting bananas. Collecting a yellow banana corresponds to a reward of +1 and collecting a blue banana corresponds to a reward of -1. The goal is to collect the highest possible cumulative reward by collecting yellow bananas while avoiding the blue ones.
 
 * **Model File** : `model.py` Contains the definition of the `QNetwork`
+* **Weights File** : `checkpoint_banana_2_LONG_SAFE.pth` for the weights trained over 6000 iterations. Copied as `model.pth`. For the shorter run, there is `checkpoint_banana_2.pth` 
 * **Agent File** : `dqn_agent.py` Contains the code for the agent's learning and acting functionality along with it's replay buffer.
 * **Training Code**: `dqn_training_banana.py` Contains the code for doing the epsilon-annealed learning
 * **Evaluation Code**: `dqn_acting_banana.py` Contains code for running the agent in a deterministic mode and evaluating.
